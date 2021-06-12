@@ -8,8 +8,9 @@ export const GlobalStyles = createGlobalStyle`
 	}
 	input{
 		color: ${({theme}) => theme.text};
+		background: ${({theme}) => theme.card};
 	}
-	.imgContainer {
+	.todo-container {
 		background: ${({theme}) => theme.card};
 	}
 `;
@@ -17,7 +18,7 @@ export const GlobalStyles = createGlobalStyle`
 export const lightTheme = {
 	body:'#f1f1f1',
 	text:'#141414',
-	card:"#f1f1f1"
+	card:"#fff"
 }
 
 export const darkTheme = {
