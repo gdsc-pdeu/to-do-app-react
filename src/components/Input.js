@@ -5,6 +5,7 @@ function Input({ task, setTask, addTask, priority, setPriority }) {
     <div className="flex flex-col md:block w-full text-center">
       <input
         type="text"
+        placeholder="Write Your Note *"
         value={task}
         onChange={(e) => setTask(e.target.value)}
         className=" ring-2 outline-none ring-green-600 focus:outline-none w-3/4 m-auto md:w-72  p-1 shadow-lg rounded-lg"
@@ -17,7 +18,7 @@ function Input({ task, setTask, addTask, priority, setPriority }) {
         Add
       </button>
       <div className="bg-grey p-3 flex flex-col justify-center items-center md:flex-row ">
-      	<h4 className=" font-semibold">Priority</h4>
+      	<h4 className=" font-semibold priority">Priority</h4>
         <div className="flex my-4 mx-1">
           <input
             type="radio"
