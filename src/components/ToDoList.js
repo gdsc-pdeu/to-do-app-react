@@ -22,14 +22,14 @@ function ToDoList({ list, removeList, makeInActive }) {
                 <span className={`inline-block text-2xl text-${priority}-600 ml-3`}>
                   {!item.isActive ? <del>{item.title}</del> : item.title}
                 </span>
-                <div className="absolute self-center   top-2 right-2">
+                <div className="absolute self-center   top-1.5 right-1.5">
                   <span className="flex h-3 w-3 ">
                     <span className={`animate-ping absolute inline-flex h-full w-full rounded-full bg-${priority}-400 opacity-75`}></span>
                     <span className={`relative  inline-flex rounded-full h-3 w-3 bg-${priority}-500`}></span>
                   </span>
                 </div>
               </div>
-              <div className="flex px-2 justify-between">
+              <div className="flex px-2 justify-between" >
                 <input
                   type="checkbox"
                   checked={checked}
@@ -37,12 +37,12 @@ function ToDoList({ list, removeList, makeInActive }) {
                   value={item.id}
                   onChange={makeInActive}
                 />
-                <button onClick={() => removeList(item.id)}>
+                <button  onClick={() => removeList(item.id)}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 font-black text-red-600"
+                    className="h-8 w-8 font-black text-red-600 cross"
                     fill="none"
-                    viewBox="0 0 24 24"
+                    viewBox="0 0 35 35"
                     stroke="currentColor"
                   >
                     <path
@@ -52,6 +52,7 @@ function ToDoList({ list, removeList, makeInActive }) {
                       d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
+                  
                 </button>
               </div>
             </div>
